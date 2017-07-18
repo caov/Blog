@@ -1,1 +1,2 @@
-## 利用Issues写博客
+## 知乎专栏《我的java学习之路》代码
+https://zhuanlan.zhihu.com/caofan
