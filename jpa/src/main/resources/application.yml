@@ -1,0 +1,5 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none  #默认为create-drop
+
