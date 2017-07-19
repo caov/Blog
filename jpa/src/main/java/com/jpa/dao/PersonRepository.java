@@ -11,7 +11,7 @@ import com.jpa.domain.Person;
 
 public interface PersonRepository extends JpaRepository<Person, Long> {
     
-    List<Person> findByAddress(String name);
+    List<Person> findByAddress(String address);
     
     Person findByNameAndAddress(String name, String address);
     
