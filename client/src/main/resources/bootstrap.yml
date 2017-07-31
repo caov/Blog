@@ -1,0 +1,19 @@
+spring: #config的相关配置要先于application.yml,而bootstrap.yml文件的加载刚好先于application.yml。
+  application:
+    name: client
+  cloud:
+    config:
+      name: config  #应用名
+      profile: dev  #dev开发环境，test测试环境，pro生成运行环境
+      uri: http://localhost:7000
+      label: trunk
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6100/eureka/ 
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    lease-expiration-duration-in-seconds: 30
+    lease-renewal-interval-in-seconds: 10

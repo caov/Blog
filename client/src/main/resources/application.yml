@@ -1,0 +1,10 @@
+spring:
+  #配置数据源
+  datasource:
+    url: jdbc:mysql://${mysql.host:192.168.7.2}:3306/motube?characterEncoding=utf-8&characterSetResults=utf-8&useUnicode=true&useSSL=true
+    username: ${mysql.username:root}
+    password: ${mysql.password:root}
+    driverClassName: com.mysql.jdbc.Driver
+    
+server:
+  port: 6800
