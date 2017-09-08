@@ -1,0 +1,5 @@
+fdfs: 
+  soTimeout: 1500
+  connectTimeout: 600
+  trackerList: 192.168.7.73:22122  #TrackerList参数,支持多个
+
