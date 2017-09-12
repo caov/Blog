@@ -1,0 +1,11 @@
+server:
+  port: 8002
+  
+spring:
+  dubbo:
+    scan: org.dubboService
+    application:
+      name: consumer
+    registry:
+      address: zookeeper://192.168.7.73:2181
+
