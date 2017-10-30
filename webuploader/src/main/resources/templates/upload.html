@@ -81,7 +81,7 @@
 	    //时间点3：分片上传完成后，通知后台合成分片
 	    afterSendFile: function (file) {        
 	        var chunksTotal = Math.ceil(file.size / (5*1024*1024));
-	        if (chunksTotal > 1) {
+	        if (chunksTotal >= 1) {
 	            //合并请求
 	            var deferred = WebUploader.Deferred();  
 	            $.ajax({
