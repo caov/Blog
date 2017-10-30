@@ -1,0 +1,42 @@
+spring:
+  mvc:
+      view:
+          prefix: /templates/
+          suffix: .ftl
+  freemarker:
+      cache: false
+      request-context-attribute: request
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo
+    username: root
+    password: 123456
+    druid:
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      stat-view-servlet:
+        allow: true
+
+logging:
+  level:
+    root: debug
+    com.cf.mapper: trace
+#mybatis
+mybatis:
+  type-aliases-package: com.cf.domain
+  mapper-locations: classpath:mapper/*.xml
+
+#mapper
+#mappers 多个接口时逗号隔开
+mapper: 
+  mappers: com.cf.util.MyMapper
+  not-empty: false
+  identity: MYSQL
+
+#pagehelper
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
